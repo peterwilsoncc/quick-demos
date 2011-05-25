@@ -22,6 +22,12 @@
 		#additional {margin:0;padding:1em;}
 		#additional h4 {margin-top:0;}
 		.nr {color:#900; font-weight: normal;}
+		
+		#subreplace{
+			text-align: center;
+			background: #fcc;
+			border: 1px solid #900;
+		}
 	</style>
 	
 	
@@ -65,7 +71,7 @@
 	</div>
 	
 	<div>
-		<input type="submit" value="Subscribe">
+		<input type="submit" id="submit" value="Subscribe">
 	</div>
 </form>
 
@@ -73,6 +79,7 @@
 <script>
 	$('#additional').hide();
 	$('#explain').click(function(){$('#additional').slideDown();return false;});
+	$('#submit').click(function(){$('#submit').replaceWith('<p id="subreplace">Why did you click this?</p>');return false;})
 	
 	
 </script>
