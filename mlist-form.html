@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>mlist-form</title>
+	<meta name="author" content="Peter Wilson">
+	<!-- Date: 2011-05-25 -->
+	
+	<style>
+	
+		body {
+			max-width: 640px;
+			margin: 0 auto;
+			padding: 10px;
+			font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+			line-height: 1.5;
+		}
+	
+		label {font-weight: bold;display:block;}
+		input {display: block;}
+		#additional {margin:0;padding:1em;}
+		#additional h4 {margin-top:0;}
+		.nr {color:#900; font-weight: normal;}
+	</style>
+	
+	
+</head>
+<body>
+
+<p>Response to <a href="http://audioboo.fm/boos/362106-improving-your-email-signup-form">Boagworld Audioboo: Improving your email signup form</a></p>
+
+<p>Basic idea is to improve the form by asking for as little information as possible while providing the option for the user to provide more info with an explanation of how this improves the user's experience</p>
+
+<hr>
+<h1>Subscribe to our mailing list</h1>
+
+<form action="#" method="post">
+	<div>
+		<label for="email">Your email address</label>
+		<input id="email" name="email" type="email">
+	</div>
+	
+	<p>We will send you an email every two weeks. You can unsubscribe at any time.</p> 
+	<p><a href="#additional" id="explain">Fill in some additional information to receive less email</a></p>
+	
+	<div id="additional">
+	<h4>How this works</h4>
+	<p>Sometimes we send newsletters and promotions relevant only to a particular state or age group. Telling us where you live and when you were born allows us avoid sending you irrelevant emails.</p>
+	
+	<div>
+		<label for="location">Your location <span class="nr">(optional)</span></label>
+		<select id="location" name="location">
+			<option>Australia</option>
+			<option>NSW, Australia</option>
+			<option>VIC, Australia</option>
+			<option>et cetera</option>
+		</select>
+	</div>
+	
+	<div>
+		<label for="age">Year of birth <span class="nr">(optional)</span></label>
+		<input id="age" name="age" type="number">
+	</div>
+	</div>
+	
+	<div>
+		<input type="submit" value="Subscribe">
+	</div>
+</form>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+<script>
+	$('#additional').hide();
+	$('#explain').click(function(){$('#additional').slideDown();return false;});
+	
+	
+</script>
+
+</body>
+</html>
