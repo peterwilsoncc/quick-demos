@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Faux Columns</title>
+	<style>
+	body {
+		background: #000;
+		width: 940px;
+		margin: 0 auto;
+		font-family: Verdana, Helvetica, Arial, sans-serif;
+		color: #333;
+	  
+	}
+	
+	.content {
+		width: 908px;
+		height: 168px;
+		margin: 1em 0;
+		padding: 16px;
+		border-radius: 8px;
+	}
+	
+	.cols {
+		background: #fff url(fallback.png) repeat-y top center;
+		background-image: -webkit-gradient(
+			linear,
+			left top,
+			right top,
+			color-stop(0, #fff),
+			color-stop(639px, #fff),
+			color-stop(640px, #bed751),
+			color-stop(100%, #bed751)
+		);
+		background-image: linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #bed751 100%);
+		background-image: -o-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #bed751 100%);
+		background-image: -moz-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #bed751 100%);
+		background-image: -webkit-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #bed751 100%);
+		background-image: -ms-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #bed751 100%);
+	}
+	
+	.divider {
+		background: #fff url(fallback.png) repeat-y top center;
+		background-image: -webkit-gradient(
+			linear,
+			left top,
+			right top,
+			color-stop(0, #fff),
+			color-stop(639px, #fff),
+			color-stop(640px, #bed751),
+			color-stop(641px, #fff),
+			color-stop(100%, #fff)
+		);
+		background-image: linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #fff 641px, #fff 100%);
+		background-image: -o-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #fff 641px, #fff 100%);
+		background-image: -moz-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #fff 641px, #fff 100%);
+		background-image: -webkit-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #fff 641px, #fff 100%);
+		background-image: -ms-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #fff 641px, #fff 100%);
+		
+	}
+	
+
+
+
+
+	.gradient-side {
+		background: #fff url(fallback.png) repeat-y top center;
+		background-image: -webkit-gradient(
+			linear,
+			left top,
+			right top,
+			color-stop(0, #fff),
+			color-stop(639px, #fff),
+			color-stop(640px, #bed751),
+			color-stop(100%, #efffa5)
+		);
+		background-image: linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #efffa5 100%);
+		background-image: -o-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #efffa5 100%);
+		background-image: -moz-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #efffa5 100%);
+		background-image: -webkit-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #efffa5 100%);
+		background-image: -ms-linear-gradient(left , #fff 0%, #fff 639px, #bed751 640px, #efffa5 100%);
+	}
+	
+
+
+	
+	</style>
+</head>
+<body>
+	
+	<div class="content cols"><p>Columns</p>
+	</div>
+	
+	<div class="content divider"><p>Divider</p>
+	</div>
+	
+	<div class="content gradient-side"><p>Gradient sidebar</p>
+	</div>
+	
+</body>
+</html>
