@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>What does IE6 do with child selectors</title>
+	<meta name="author" content="Peter Wilson">
+	<!-- Date: 2011-05-25 -->
+	
+	<style>
+		.space > li {
+			color: red;
+		}
+
+		.nospace>li {
+			color: red;
+		}
+
+	</style>
+	
+</head>
+<body>
+
+<h1>What does IE6 do with child selectors?</h1> 
+	
+<p>In both cases the text should be red, use http://webpagetest.org/ to test.</p>
+
+
+
+<ul class="space">
+	<li><code>.space > li</li>
+</ul>
+
+<ul class="nospace">
+	<li><code>.nospace>li</li>
+</ul>
+
+
+</body>
+</html>
